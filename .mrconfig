@@ -1,3 +1,6 @@
 
 [mr_repos/wandsas/dotfiles]
 checkout = git clone 'git@github.com:sawander/dotfiles.git' 'dotfiles'
+
+[/home/wandsas/mr/wandsas/dotfiles]
+checkout = git clone 'git@github.com:sawander/dotfiles.git' 'dotfiles'
