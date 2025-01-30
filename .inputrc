@@ -2,18 +2,18 @@
 
 $include /etc/inputrc
 
-set editing-mode vi
-set keymap vi
+#set editing-mode vi
+#set keymap vi
 
 set input-meta off
 set convert-meta off
 set output-meta on
 
 # Show different cursor for vi-modes
-set vi-ins-mode-string \1\e[?0c\2
-set vi-cmd-mode-string \1\e[?8c\2
-set vi-ins-mode-string \1\e[6 q\2
-set vi-cmd-mode-string \1\e[2 q\2
+#set vi-ins-mode-string \1\e[?0c\2
+#set vi-cmd-mode-string \1\e[?8c\2
+#set vi-ins-mode-string \1\e[6 q\2
+#set vi-cmd-mode-string \1\e[2 q\2
 
 # Arrow keys in ANSI mode
 "\C-[[A": history-search-backward
@@ -40,10 +40,10 @@ Meta-n: history-search-forward
 "\eOH": beginning-of-line
 "\eOF": end-of-line
 
-#set colored-stats on
-#set visible-stats on
-#set mark-symlinked-directories On
-#set completion-ignore-case On
+#for freebsd console
+"\e[H": beginning-of-line
+"\e[F": end-of-line
+
 set bell-style visible
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
