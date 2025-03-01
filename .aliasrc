@@ -1,14 +1,18 @@
 alias gcd='cd $(git rev-parse --show-toplevel)'
 alias ga='git add .'
-alias gc='git commit -m'
+alias gaa='git add --all'
 alias gr='git remote -v'
 alias gst='git status'
+alias gcm='git commit -m'
 alias gpu='git push origin master'
 alias gpl='git pull origin master'
 alias grhh='git reset HEAD --hard'
+alias gb='git branch -a'
+alias gt='git tag -l'
 
 alias ..='cd ..'
 alias ...='cd ../..'
+alias ....='cd ../../..'
 
 alias pu=pushd
 alias po=popd
