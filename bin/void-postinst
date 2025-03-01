@@ -35,9 +35,17 @@ PKGS=" $PKGS dconf-editor"
 # build
 PKGS=" $PKGS rust cargo go make bmake cmake meson ninja pkg-config pkgconf"
 PKGS=" $PKGS make autoconf213 automake clang19 llvm19 bison flex"
-PKGS=" $PKGS mblaze lynx poppler-utils feh neomutt isync msmtp"
+PKGS=" $PKGS mblaze lynx poppler-utils feh neomutt isync msmtp gettext"
 PKGS=" $PKGS openbsd-file openbsd-netcat bsdtar bsdunzip libarchive"
-
+PKGS=" $PKGS zsh zsh-completions  zsh-syntax-highlighting"
+PKGS=" $PKGS zsh-history-substring-search zsh-autosuggestions"
+PKGS=" $PKGS pam-gnupg lynx notmuch abook urlview buildah"
+PKGS=" $PKGS nfs-utils sv-netmount nfs4-acl-tools"
 for pkg in $PKGS; do
 	sudo xbps-install -y $pkg
 done
+PKGS=" $PKGS signify s6 s6-doc s6-man-pages s6-dns s6-dns-doc"
+PKGS=" $PKGS s6-linux-utils s6-linux-utils-doc s6-networking s6-networking-doc"
+PKGS=" $PKGS s6-networking-man-pages s6-portable-utils s6-portable-utils-doc"
+PKGS=" $PKGS s6-portable-utils-man-pages s6-rc s6-rc-doc execline execline-doc"
+PKGS=" $PKGS execline-man-pages skalibs skalibs-doc"

@@ -29,12 +29,12 @@ export XDG_DATA_DIRS=${XDG_DATA_HOME}:${XDG_DATA_DIRS:-/usr/local/share:/usr/sha
 # Turnstile runit service
 export SVDIR=$HOME/service
 
-# Required for dbus
+# Required for dbus/xdg-dekstop-portal session
 export XDG_CURRENT_DESKTOP=sway
 export XDG_SESSION_DESKTOP=${XDG_SESSION_DESKTOP:-sway}
 export XDG_SESSION_TYPE=${XDG_SESSION_TYPE=-wayland}
 export XCURSOR_THEME=plan9
-export XCURSOR_SIZE=24
+export XCURSOR_SIZE=16
 
 export GOPATH=$HOME/go
 export GCC_COLORS='error=01;31:warning=01;35:locus=01:quote=01:path=01;36'

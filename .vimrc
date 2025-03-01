@@ -18,12 +18,12 @@ set shiftwidth=2
 set expandtab
 
 set autoread                " automatically read changed files
-
 set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
 
-" syntax
 syntax on
 "sil! colorscheme shblah     " default colorscheme
+"sil! colorscheme Tomorrow-Night-Bright
+sil! colorscheme default
 
 " interface
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
@@ -44,7 +44,6 @@ set completeopt=menuone,longest
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.db,*.o,*.a
 
 " directories
-"
 if !isdirectory($XDG_CACHE_HOME . "/vim/undo")
 	call mkdir($XDG_CACHE_HOME . "/vim/undo", "p")
 endif
@@ -94,7 +93,7 @@ nnoremap Y y$   " Make Y behave like other capitals
 nnoremap Q @q   " qq to record, Q to replay
 
 " Reselect visual block after indent/outdent
-vnoremap < <gv
+noremap < <gv
 vnoremap > >gv
 vnoremap = =gv
 
