@@ -1,0 +1,22 @@
+
+[.gnupg]
+checkout = git clone 'git@rpi3.local:repos/gnupg-config.git' '.gnupg'
+fixups = 
+	find $MR_REPO -type f -exec chmod 600 {} \;
+	find $MR_REPO -type d -exec chmod 700 {} \;
+
+[.ssh]
+checkout = git clone 'git@rpi3.local:repos/ssh-config.git' '.ssh'
+fixups = 
+	find $MR_REPO -type f -exec chmod 600 {} \;
+	find $MR_REPO -type d -exec chmod 700 {} \;
+
+[.password-store]
+checkout = git clone 'git@rpi3.local:repos/password-store.git' '.password-store.'
+fixups = 
+	find $MR_REPO -type f -exec chmod 600 {} \;
+	find $MR_REPO -type d -exec chmod 700 {} \;
+
+[.config/git]
+checkout = git clone 'git@rpi3.local:repos/git-config.git' 'git'
+
