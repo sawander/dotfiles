@@ -1,14 +1,11 @@
 
-# No git-prompt.sh for root.
 [ $EUID == 0 ] && return
 
-# If 30-git-prompt.sh not available ==> We try to get it from upsteam git.
-if [ ! -f ~/.bashrc.d/30-git-prompt.sh ]; then
+if [ ! -f ~/.bashrc.d/git-prompt.sh ]; then
   curl -sLOf ~/.bashrc.d/git-prompt.sh --create-dirs \
     "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh"
 fi
 
-### Bash Git Prompt properties ###
 # Overridable by bash.showDirtyState=true
 GIT_PS1_SHOWDIRTYSTATE="true"
 # If something is stashed #

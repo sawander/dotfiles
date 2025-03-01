@@ -1,0 +1,23 @@
+#!/bin/sh
+
+cmd=$1
+
+case $cmd in
+poweroff)
+  notify-send "Poweroff signal received"
+  dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.STOP
+  ;;
+reboot)
+  nofify-send "Reboot signal received"
+  dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.RESTART
+  ;;
+suspend)
+  dbus-send --system --print-repky --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend
+  ;;
+hibernate)
+  dbus-send --system --print-repky --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Hibernate
+  ;;
+*)
+  echo "Illegal state"
+esac
+

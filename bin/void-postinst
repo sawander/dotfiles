@@ -1,0 +1,43 @@
+#!/bin/sh
+
+sudo xbps-install -Su
+
+# compression
+PKGS="zlib xz 7z pv lzop bsdtar bsdunzip"
+PKGS="$PKGS chrony cronie socklog-void dbus seaPKFtd sway turnstile"
+PKGS=" $PKQ lm_sensors smartmontools apparmor"
+
+# commandline
+PKGS=" $PKGS cryptsetup snooze fstrim git git-libsecret pass sanoid"
+PKGS=" $PKGS apparmor brightnessctl sanoid fzy fzf opendoas"
+
+# audio/videp
+PKGS=" $PKGS pipewire apulse alsa-pipewire wireplumber"
+PKGS=" $PKGS mpd ympd mpv ncmppcpp playerctl"
+PKGS=" $PKGS mesa-dri"
+
+# ip/dns
+PPKGS=" $PKGS bind-utils net-tools ethtool bridge-utils tcpdump openbsd-netcat"
+
+# containers/vm
+PKGS=" podman qemu-user-static binfmt-support qemu libvirt virt-manager"
+
+# sway 
+PKGS=" $PKGS bemenu wofi Waybar clipman mako" 
+PKGS=" $PKGS swayidle swaylock grimshot grim slurp"
+pkgs=" $PKGS xdg-desktop-portal-wlr xcursor-vanilla-dmz-aa"
+PKGS=" $PKGS alacritty kitty  firefox chromium"
+PKGS=" $PKGS nautilus gnome-text-editor gnome-system-monitor gnome-disk-utility"
+PKGS=" $PKGS gnome-keyring gnome-ssh-askpass pinentry-gnome polkit-gnome seahorse"
+PKGS=" $PKGS dbus-elogind dbus-elogind-libs dbus-elogind-x11 wireplumber-elogind"
+PKGS=" $PKGS dconf-editor"
+
+# build
+PKGS=" $PKGS rust cargo go make bmake cmake meson ninja pkg-config pkgconf"
+PKGS=" $PKGS make autoconf213 automake clang19 llvm19 bison flex"
+PKGS=" $PKGS mblaze lynx poppler-utils feh neomutt isync msmtp"
+PKGS=" $PKGS openbsd-file openbsd-netcat bsdtar bsdunzip libarchive"
+
+for pkg in $PKGS; do
+	sudo xbps-install -y $pkg
+done

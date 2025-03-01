@@ -1,0 +1,41 @@
+alias gcd='cd $(git rev-parse --show-toplevel)'
+alias ga='git add .'
+alias gc='git commit -m'
+alias gr='git remote -v'
+alias gst='git status'
+alias gpu='git push origin master'
+alias gpl='git pull origin master'
+alias grhh='git reset HEAD --hard'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+
+alias pu=pushd
+alias po=popd
+
+alias ls='ls --color=auto'
+alias ip='ip --color=auto'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias lsd='ls -d *$@*'
+alias lad='ls -Ad .*$@*'
+alias lsa='ls -Ad .*$@*'
+alias lsn='ls -hrtl *$@* | tail'
+alias lso='ls -hrtl *$@* | head'
+alias lsl='ls -Alh'
+alias halt='sudo /sbin/halt'
+alias root='sudo /sbin/reboot'
+alias cls=clear
+alias md=mkdir
+alias rd=rmdir
+alias hy=history
+alias mo=more
+alias le=less
+alias hl='history | less'
+alias ct='tar -cvpf'
+alias xt='tar -xvpf'
+

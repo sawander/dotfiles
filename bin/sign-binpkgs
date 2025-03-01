@@ -1,0 +1,10 @@
+#!/bin/sh
+
+export XBPS_PASSPHRASE=foobar
+
+# Initialize repository metadata
+#xbps-rindex --sign --signedby "wandsas" --privkey ~/.ssh/privkey.pem $PWD/hostdir/binpkgs
+
+# Make a signature per package
+xbps-rindex --sign-pkg --privkey ~/.ssh/privkey.pem ~/repos/void/void-packages/hostdir/binpkgs/*.xbps
+
