@@ -1,3 +1,4 @@
+# -*- mode: sh -*-
 
 [.gnupg]
 checkout = git clone 'git@rpi3.local:repos/gnupg-config.git' '.gnupg'
