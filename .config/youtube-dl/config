@@ -1,0 +1,11 @@
+
+--format "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best"
+
+--audio-format m4a
+--extract-audio
+
+--output "~/music/%(title)s-%(id)s.%(ext)s"
+
+--embed-thumbnail
+--geo-bypass
+

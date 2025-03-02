@@ -14,10 +14,8 @@
       "7": "7",
       "8": "8",
       "9": "9",
-      "10": "10",
-      /*"focused": "",*/
-      /*"active": ""*/
-    },
+      "10": "10"
+    }
   },
 
 	"sway/mode": {
@@ -52,13 +50,13 @@
       }
     },
     "format": " {:%a %d %b, %H:%M}",
-    "format-alt": " {:%Y/%m/%d, <big>%H:%M</big>}",
+    "format-alt": " {:%Y/%m/%d, <big>%H:%M</big>}"
   },
 
   "cpu": {
     "interval": 1,
     "format": "{icon} {usage:>2}%",
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
   },
 
   "disk": {
@@ -69,7 +67,7 @@
 
   "memory": {
     "interval": 10,
-    "format": "  {used:0.1f}/{total:0.1f}G",
+    "format": "  {used:0.1f}/{total:0.1f}G"
   },
 
   "network": {
@@ -80,11 +78,11 @@
     "format-disconnected": "  Disconnected",
     "format-disabled": "  Disabled",
     "format-alt": "    {essid}",
-    "tooltip-format": " {ifname} via {gwaddr}",
+    "tooltip-format": " {ifname} via {gwaddr}"
   },
 
   "temperature": {
-      "format": " {temperatureC}°C",
+      "format": " {temperatureC}°C"
   },
 
 	"backlight": {
@@ -121,8 +119,8 @@
       "default": ["󰕾", "󰕾", "󰕾"]
     },
     "scroll-step": 5.0,
-    "on-click-right": "pavucontrol",
-    "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle"
+    "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol"
   },
 
 	"mpd": {
@@ -149,7 +147,11 @@
         "playing": ""
     },
     "tooltip-format": "MPD (connected)",
-    "tooltip-format-disconnected": "MPD (disconnected)"
+    "tooltip-format-disconnected": "MPD (disconnected)",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl stop",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
 	},
 
 	"tray": {

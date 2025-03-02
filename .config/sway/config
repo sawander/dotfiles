@@ -7,13 +7,12 @@ set $up k
 set $right l
 
 set $term alacritty
-set $menu bemenu-run --no-overlap --line-height 28 --ignorecase --fb "#1e1e2e" --ff "#cdd6f4" \
-  --nb "#1e1e2e" --nf "#cdd6f4" --tb "#1e1e2e" --hb "#1e1e2e" --tf "#f38ba8" --hf "#f9e2af" \
-  --af "#cdd6f4" --ab "#1e1e2e" --no-exec --prompt "" --list 10 \
-  | xargs swaymsg exec --
+set $menu wofi --show=drun --gtk-dark --line=9 --width=600 height=400 | xargs swaymsg exec
+set $menualt bemenu-run --no-overlap --line-height 28 --ignorecase --fb "#1e1e2e" --ff "#cdd6f4" --nb "#1e1e2e" --nf "#cdd6f4" --tb "#1e1e2e" --hb "#1e1e2e" --tf "#f38ba8" --hf "#f9e2af" --af "#cdd6f4" --ab "#1e1e2e" --no-exec --prompt "" --list 10 | xargs swaymsg exec --
 
 ### Key bindings
     bindsym $mod+d exec $menu
+    bindsym $mod+Shift+d exec $menualt
     bindsym $mod+Return exec $term
     bindsym $mod+Shift+Return exec nautilus
     bindsym Alt+Return exec kitty
