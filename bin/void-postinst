@@ -49,3 +49,4 @@ PKGS=" $PKGS s6-linux-utils s6-linux-utils-doc s6-networking s6-networking-doc"
 PKGS=" $PKGS s6-networking-man-pages s6-portable-utils s6-portable-utils-doc"
 PKGS=" $PKGS s6-portable-utils-man-pages s6-rc s6-rc-doc execline execline-doc"
 PKGS=" $PKGS execline-man-pages skalibs skalibs-doc"
+xdg-dbus-proxy dbus-glib dbus-test-runner squashfs-tools lsof htop neofetch
