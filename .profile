@@ -34,7 +34,7 @@ export XDG_CURRENT_DESKTOP=sway
 export XDG_SESSION_DESKTOP=${XDG_SESSION_DESKTOP:-sway}
 export XDG_SESSION_TYPE=${XDG_SESSION_TYPE=-wayland}
 export XCURSOR_THEME=plan9
-export XCURSOR_SIZE=16
+export XCURSOR_SIZE=24
 
 export GOPATH=$HOME/go
 export GCC_COLORS='error=01;31:warning=01;35:locus=01:quote=01:path=01;36'

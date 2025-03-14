@@ -1,14 +1,14 @@
 #!/bin/sh
 
-export KEY=${HOME}/.ssh/privkey.pem
-export REPO=${HOME}/repos/void/void-packages
-export XBPS_PASSPHRASE=foobar
+XBPS_KEY=${HOME}/.ssh/privkey.pem
+XBS_REPO=${HOME}/repos/void/void-packages
+XBPS_PASSPHRASE=foobar
 
 # Initialize repository metadata
-#xbps-rindex --sign --signedby "wandsas" --privkey ${KEY} ${REPO}/hostdir/binpkgs
+#xbps-rindex --sign --signedby "wandsas" --privkey ${XBPS_KEY} ${XBPS_REPO}/hostdir/binpkgs
 
 # Make a signature per package
-xbps-rindex --sign-pkg --privkey ${KEY} ${REPO}/hostdir/binpkgs/*.xbps
+xbps-rindex --sign-pkg --privkey ${XBPS_KEY} ${XBPD_REPO}/hostdir/binpkgs/*.xbps
 
 # Verify signed pkgs
-xbps-query --repository=${REPO}/hostdir/binpkgs -vL
+xbps-query --repository=${XBPS_REPO}/hostdir/binpkgs -vL

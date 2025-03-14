@@ -1,8 +1,3 @@
-# PATH=${PATH:-/usr/local/bin:/usr/local/sbin:/usr/bin}
-# export PATH
-
-# /usr/bin /usr/local/bin /usr/local/sbin ~/go/bin ~/.cargo/bin ~/.local/bin ~/bin 
-
 
 prependpath(){
   case ":$PATH:" in
