@@ -1,10 +1,13 @@
 
 [ $EUID == 0 ] && return
 
-if [ ! -f ~/.bashrc.d/git-prompt.sh ]; then
-  curl -sLOf ~/.bashrc.d/git-prompt.sh --create-dirs \
-    "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh"
-fi
+[ -f /usr/share/git/git-prompt.sh ] || return
+. /usr/share/git/git-prompt.sh
+
+#if [ ! -f ~/.bashrc.d/git-prompt.sh ]; then
+#  curl -sLOf ~/.bashrc.d/git-prompt.sh --create-dirs \
+#    "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh"
+#fi
 
 # Overridable by bash.showDirtyState=true
 GIT_PS1_SHOWDIRTYSTATE="true"
@@ -28,6 +31,5 @@ GIT_PS1_DESCRIBE_STYLE="branch,describe,tag"
 
 # Title
 PS1='\[\033]0;\u@\h:\w\007'
-
 # Prompt
 PS1+='\[\033[01;32m\]\u@\h\[\033[00m\]$(__git_ps1 " (%s)") \[\033[0;37m\]\W \$\[\033[00m\] '
