@@ -23,7 +23,7 @@ set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
 syntax on
 "sil! colorscheme shblah     " default colorscheme
 "sil! colorscheme Tomorrow-Night-Bright
-sil! colorscheme default
+sil! colorscheme industry
 
 " interface
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+

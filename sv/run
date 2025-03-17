@@ -1,0 +1,14 @@
+#!/bin/sh
+
+[ -r ./conf ] && . ./conf
+
+envdir="/run/user/$(id -u)/1000/env"
+test -d $envdir || mkdir -p $envdir
+
+: "${DBUS_SESSION_BUS_ADDRESS:=unix:path=/run/user/$(id -u)/bus}"
+
+if [ -d "$envdir ]; then
+  echo ${DBUS_SESSION_BUS_ADDRESS} > $envdir/DBUS_SESSION_BUS_ADDRESS
+fi
+
+exec chpst -e "/run/user/$(id -u)/env" dbus-daemon --session --nofork --nopidfile --address="${DBUS_SESSION_BUS_ADDRESS}" "${OPTS}"

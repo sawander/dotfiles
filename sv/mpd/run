@@ -1,2 +1,2 @@
-#!/bin/sh
-mpd --no-daemon --stderr
+#!/bin/execlineb -P
+mpd --no-daemon --verbose

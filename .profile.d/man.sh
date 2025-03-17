@@ -1,5 +1,3 @@
-#MANPATH="$MANPATH:$XDG_DATA_HOME/man:/usr/local/share/man:usr/share/man"
-#export MANPATH
 
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \

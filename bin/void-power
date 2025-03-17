@@ -8,7 +8,7 @@ case "${cmd}" in
     dbus-send --system --print-reply --dest="org.freedesktop.login1" /org/freedesktop/login1 org.freedesktop.login1.Manager.PowerOff boolean:true
     ;;
   reboot)
-    nofify-send "Reboot signal received"
+    notify-send "Reboot signal received"
     dbus-send --system --print-reply --dest="org.freedesktop.login1" /org/freedesktop/login1 org.freedesktop.login1.Manager.Reboot boolean:true
     ;;
   suspend)

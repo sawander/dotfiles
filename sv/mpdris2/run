@@ -1,0 +1,3 @@
+#!/bin/sh
+mpdris2-rs --host /run/user/1000/mpd.sock
+

@@ -1,11 +1,7 @@
-#!/bin/sh
-
-[ -r ./conf ] && . ./conf
-
-: "${DBUS_SESSION_BUS_ADDRESS:=unix:path=/run/user/$(id -u)/bus}"
-
-if [ -d "$TURNSTILE_ENV_DIR" ]; then
-	echo "$DBUS_SESSION_BUS_ADDRESS" > "$TURNSTILE_ENV_DIR"/DBUS_SESSION_BUS_ADDRESS
-fi
-
-exec chpst -e "$TURNSTILE_ENV_DIR" dbus-daemon --session --nofork --nopidfile --address="$DBUS_SESSION_BUS_ADDRESS" $OPTS
+#!/bin/execlineb -P
+importas XDG_RUNTIME_DIR XDG_RUNTIME_DIR
+dbus-daemon
+ --session
+ --nofork
+ --nopidfile
+ --address=unix:path=${XDG_RUNTIME_DIR}/bus
