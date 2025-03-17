@@ -26,8 +26,8 @@ GIT_PS1_COMPRESSSPARSESTATE="?"
 # options: contains, branch, describe, tag, default 
 GIT_PS1_DESCRIBE_STYLE="branch,describe,tag"
 
-### Window title ###
+# Title
 PS1='\[\033]0;\u@\h:\w\007'
 
-### Prompt ###
-PS1+='\[\033[01;32m\]\u@\h\[\033[00m\]$(__git_ps1 " (%s)") \[\033[01;34m\]\w \$\[\033[00m\] '
+# Prompt
+PS1+='\[\033[01;32m\]\u@\h\[\033[00m\]$(__git_ps1 " (%s)") \[\033[0;37m\]\W \$\[\033[00m\] '
