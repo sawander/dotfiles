@@ -88,6 +88,7 @@ else
 	cmap w!! w !sudo tee % >/dev/null
 endif
 
+map Q gq        " don't use Ex mode, use Q for formatting
 command! W w    " too often i type W instead of w
 nnoremap Y y$   " Make Y behave like other capitals
 nnoremap Q @q   " qq to record, Q to replay
@@ -127,6 +128,18 @@ let lrdirs = printf("lr -Ut 'type == d && !(%s && !prune)'", lrigdir)
 nnoremap <c-p>p :call FzyCommand(lrfile, ':e')<cr>
 nnoremap <c-p>d :call FzyCommand(lrdirs, ':e')<cr>
 
+" ----------------------------------------------------------------------------
+" Enable Omni completion when opening a file only if a specific plugin does
+" not already exist for that filetype. This allows Omni completion
+" (Ctrl-x/Ctrl-o) to work with any programming language if and only if a syntax
+" file exists for the said language.
+" ----------------------------------------------------------------------------
+if exists("+omnifunc")
+   autocmd Filetype *
+        \ if &omnifunc == "" |
+        \   setlocal omnifunc=syntaxcomplete#Complete |
+        \ endif
+endif
 " ----------------------------------------------------------------------------
 " co? : Toggle options (inspired by unimpaired.vim) from: https://github.com/junegunn/dotfiles
 " ----------------------------------------------------------------------------
