@@ -1,2 +1,2 @@
 #!/bin/execlineb -P
-mpd --no-daemon --verbose
+mpd --no-daemon

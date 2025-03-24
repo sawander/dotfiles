@@ -1,0 +1,2 @@
+#!/bin/execline -P
+exec /usr/libexec/polkit-gnome-authentication-agent-1
